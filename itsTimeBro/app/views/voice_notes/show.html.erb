@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alarma:</strong>
+  <%= @voice_note.alarma_id %>
+</p>
+
+<p>
+  <strong>Voicenote:</strong>
+  <%= @voice_note.voiceNote %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @voice_note.usuario_id %>
+</p>
+
+<%= link_to 'Edit', edit_voice_note_path(@voice_note) %> |
+<%= link_to 'Back', voice_notes_path %>

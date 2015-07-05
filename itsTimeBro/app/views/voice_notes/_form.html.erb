@@ -1,0 +1,29 @@
+<%= form_for(@voice_note) do |f| %>
+  <% if @voice_note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voice_note.errors.count, "error") %> prohibited this voice_note from being saved:</h2>
+
+      <ul>
+      <% @voice_note.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :alarma_id %><br>
+    <%= f.number_field :alarma_id %>
+  </div>
+  <div class="field">
+    <%= f.label :voiceNote %><br>
+    <%= f.text_field :voiceNote %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br>
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

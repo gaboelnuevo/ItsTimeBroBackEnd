@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombrealarma:</strong>
+  <%= @alarma.nombreAlarma %>
+</p>
+
+<p>
+  <strong>Fechaalarma:</strong>
+  <%= @alarma.fechaAlarma %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @alarma.usuario_id %>
+</p>
+
+<%= link_to 'Edit', edit_alarma_path(@alarma) %> |
+<%= link_to 'Back', alarmas_path %>

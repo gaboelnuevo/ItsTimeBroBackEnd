@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Voice Notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alarma</th>
+      <th>Voicenote</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @voice_notes.each do |voice_note| %>
+      <tr>
+        <td><%= voice_note.alarma_id %></td>
+        <td><%= voice_note.voiceNote %></td>
+        <td><%= voice_note.usuario_id %></td>
+        <td><%= link_to 'Show', voice_note %></td>
+        <td><%= link_to 'Edit', edit_voice_note_path(voice_note) %></td>
+        <td><%= link_to 'Destroy', voice_note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Voice note', new_voice_note_path %>
