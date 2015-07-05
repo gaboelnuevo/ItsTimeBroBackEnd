@@ -26,6 +26,8 @@ class VoiceNotesController < ApplicationController
   def create
     @voice_note = VoiceNote.new(voice_note_params)
 
+    @voice_note.Voicenote = params[:Voicenote]	
+
     respond_to do |format|
       if @voice_note.save
         format.html { redirect_to @voice_note, notice: 'Voice note was successfully created.' }

@@ -16,7 +16,7 @@
     <% @voice_notes.each do |voice_note| %>
       <tr>
         <td><%= voice_note.alarma_id %></td>
-        <td><%= voice_note.voiceNote %></td>
+        <td><a src="<%= voice_note.voiceNote %>">Download</a></td>
         <td><%= voice_note.usuario_id %></td>
         <td><%= link_to 'Show', voice_note %></td>
         <td><%= link_to 'Edit', edit_voice_note_path(voice_note) %></td>
