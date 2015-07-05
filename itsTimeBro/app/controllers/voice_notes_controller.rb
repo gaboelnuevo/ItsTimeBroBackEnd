@@ -26,7 +26,7 @@ class VoiceNotesController < ApplicationController
   def create
     @voice_note = VoiceNote.new(voice_note_params)
 
-    @voice_note.Voicenote = params[:Voicenote]	
+    @voice_note.voiceNote = params[:Voicenote]	
 
     respond_to do |format|
       if @voice_note.save

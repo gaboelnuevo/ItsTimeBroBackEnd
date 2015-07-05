@@ -1,3 +1,3 @@
 class VoiceNote < ActiveRecord::Base
-	mount_uploader :Voicenote, VoicefileUploader
+	mount_uploader :voiceNote, VoicefileUploader
 end
