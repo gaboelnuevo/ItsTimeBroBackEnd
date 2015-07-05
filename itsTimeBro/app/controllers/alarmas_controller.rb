@@ -5,11 +5,13 @@ class AlarmasController < ApplicationController
   # GET /alarmas.json
   def index
     @alarmas = Alarma.all
+    render json: @alarmas
   end
 
   # GET /alarmas/1
   # GET /alarmas/1.json
   def show
+
   end
 
   # GET /alarmas/new
